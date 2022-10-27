@@ -2,15 +2,9 @@
 const menu = document.querySelector(".menu")
 const items = document.querySelector(".items")
 
-
 menu.addEventListener("click", ()=>{
     items.classList.toggle("active")
 })
-
-
-
-
-
 
 
 const toggleTheme = document.getElementById('toggle-theme');
