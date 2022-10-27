@@ -1,0 +1,52 @@
+ .card{
+    width: 90%;
+    margin:1em auto;
+    padding: 1em;
+    border-radius: 1em;
+    background:rgba(0, 0, 0, 0.082);
+    color: var(--text-color);
+}
+
+
+
+.card h2{
+    /* color: var(--primary); */
+    font-weight:bold;
+    opacity: .8;
+    margin-bottom: .5em;
+    text-decoration: 3px var(--primary) underline;
+}
+
+
+.card p {
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+.card li{
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+
+element.style {
+    width: 9px;
+    height: 75px;
+}
+.content a > img, .content noscript > img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+img.image-lazy-loaded {
+    animation: fadeInImage 0.3s ease-in;
+}
+.content img {
+    vertical-align: middle;
+}
+
+
+@media screen and (max-width:720px) {
+    .card li, .card p{
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,130 @@
+body{
+    overflow: hidden;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding: 0 1em;
+
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgb(73, 73, 73),
+    rgb(56, 56, 56),
+    rgb(34, 34, 34),
+    rgb(26, 26, 26),
+    #000
+  );
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+nav p {
+  font-size: 2rem;
+  font-family: 'Dancing Script', sans-serif;
+  color: var(--primary);
+}
+nav .items {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  animation:clip-path .3s ease-in-out;
+
+}
+nav .items a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-width: 150px;
+  height: 100%;
+
+  color: #fff;
+}
+
+nav .items a.ac {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+nav .items a:hover {
+  background: rgba(0, 0, 0, 0.63);
+}
+
+
+
+
+
+
+.menu{
+    display: none;
+}
+.menu:hover{
+    cursor: pointer;
+}
+
+
+/* RESPONDIVE */
+
+
+.items{
+    animation: clip-path .2s ease-in-out;
+}
+
+@media screen and (max-width:720px) {
+    .menu{
+        width: 80px;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    nav .items{
+        
+        /* display: grid; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(0, 0, 0, 0.781);
+        backdrop-filter: blur(4px);
+        width: 100% ;
+        height: 100vh;
+        top: 80px;
+        left: 00vw;
+        position:fixed;
+
+        z-index: 1;
+    
+        transition:clip-path .15s;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+
+
+
+    }
+    nav .items a{
+        height: 100px;
+    }
+
+
+    nav .active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    }
+    
+
+
+}
+
+
+
